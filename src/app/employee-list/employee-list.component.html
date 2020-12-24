@@ -1,0 +1,51 @@
+<div class="container">
+   
+    <br><h2 align="center">Employee List</h2> 
+    <button type="button" class="btn btn-danger float-right" (click)="goToHome()">LogOut</button><br><br><br>
+    <!-- <p align="center">Use action to perform crud operations</p>          -->
+
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Employee ID</th>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Designation</th>
+          <th>Email id</th>
+          <th>Salary</th>
+          <th>Actions</th> 
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let emp of emp">
+         
+          <td>{{emp.employeeId}}</td>
+          <td>{{emp.employeeName}}</td>
+          <td>{{emp.employeeAge}}</td>
+          <td>{{emp.employeeDesignation}}</td>
+          <td>{{emp.employeeEmailId}}</td>
+          <td>{{emp.employeeSalary}}</td>
+          <td>
+           
+          
+            <button type="button" class="btn btn-primary" (click)="goToEditEmployee(emp.employeeId)"
+            matTooltip="Edit Employee Details">Edit</button> &nbsp;
+            
+            <button type="button" class="btn btn-info" (click)="goToViewEmployee(emp.employeeId)"
+            matTooltip="View Employee Details">View</button> &nbsp;
+            
+            <button type="button" class="btn btn-danger" (click)="deleteEmployee(emp.employeeId)"
+            matTooltip="Delete Employee Details"
+            >Delete</button>
+
+          </td>
+        </tr>
+      </tbody>
+   
+    </table>
+    <button type="button" class="btn btn-success" (click)="goToAddEmployee()"
+    matTooltip="Add New Employee Record"
+    matTooltipPosition="after">Add Employee</button>
+
+  </div>
+  

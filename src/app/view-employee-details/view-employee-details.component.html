@@ -1,0 +1,44 @@
+<div class="container">
+   
+    <h2 align="center">Employee List</h2> 
+    <p align="center">Use action to perform crud operations</p>         
+
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Employee ID</th>
+          <th> Name</th>
+          <th>Age</th>
+          <th>Designation</th>
+          <th>Email id</th>
+          <th>Salary</th>
+          <th>Actions</th> 
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+         
+          <td>{{emp.employeeId}}</td>
+          <td>{{emp.employeeName}}</td>
+          <td>{{emp.employeeAge}}</td>
+          <td>{{emp.employeeDesignation}}</td>
+          <td>{{emp.employeeEmailId}}</td>
+          <td>{{emp.employeeSalary}}</td>
+          <td>
+           
+          
+            <button type="button" class="btn btn-info" (click)="goToEmployeeList()"
+            
+            matTooltip="Go Back to Employee List"
+            
+            >Back</button>
+
+          </td>
+        </tr>
+      </tbody>
+   
+    </table>
+    
+
+  </div>
+  

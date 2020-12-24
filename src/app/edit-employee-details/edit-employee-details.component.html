@@ -1,0 +1,53 @@
+<div class="container-fluid">
+    <h2 align="center">Update Employee Record</h2>
+    <form #empForm="ngForm" (ngSubmit)="updateEmployeeForm()">
+   
+    
+    
+    <div class="form-control">
+        <label><b>Employee id: </b></label>
+        <input type="text" class="form-group" name="id" disabled [(ngModel)]="emp.employeeId">
+    
+    </div>
+       
+    <div class="form-control">
+        <label><b>Employee Name: </b></label>
+        <input type="text" class="form-group" name="name" [(ngModel)]="emp.employeeName">
+    
+    </div>
+    
+    <div class="form-control">
+        <label><b>Employee Age: </b></label>
+        <input type="text" class="form-group" name="age" [(ngModel)]="emp.employeeAge">
+    
+    </div>
+    <div class="form-control">
+        <label><b>Employee Designation: </b></label>
+        <input type="text" class="form-group" name="designation" [(ngModel)]="emp.employeeDesignation">
+    
+    </div>
+    <div class="form-control">
+        <label><b>Employee Email: </b></label>
+        <input type="email" class="form-group" name="email" [(ngModel)]="emp.employeeEmailId">
+    </div>
+    <div class="form-control">
+        <label><b>Employee Salary: </b></label>
+        <input type="number" class="form-group" name="salary" [(ngModel)]="emp.employeeSalary">
+    
+    </div>
+    
+    
+    
+    <button type="submit" class="btn btn-primary" >Update</button> &nbsp;
+    <button type="button" class="btn btn-info" (click)="goToEmployeeList()" >Back</button> &nbsp;
+                
+    
+    
+    
+    
+    
+    </form>
+    
+    
+    
+    </div>

@@ -1,0 +1,46 @@
+<div class="container-fluid">
+<h2 align="center">Add New Employee Record</h2>
+<form #empForm="ngForm" (ngSubmit)="validateAndSubmit()">
+<div class="form-control">
+    <label><b>Employee id: </b></label>&nbsp;
+    <input type="text" class="form-group" disabled name="id" [(ngModel)]="emp.employeeId">
+
+</div>
+   
+<div class="form-control">
+    <label><b>Employee Name: </b></label>&nbsp;
+    <input type="text" class="form-group" name="name" [(ngModel)]="emp.employeeName">
+
+</div>
+
+<div class="form-control">
+    <label><b>Employee Age: </b></label>&nbsp;
+    <input type="text" class="form-group" name="age" [(ngModel)]="emp.employeeAge">
+
+</div>
+<div class="form-control">
+    <label><b>Employee Designation: </b></label>&nbsp;
+    <input type="text" class="form-group" name="designation" [(ngModel)]="emp.employeeDesignation">
+
+</div>
+<div class="form-control">
+    <label><b>Employee Email: </b></label>&nbsp;
+    <input type="email" class="form-group" name="email" [(ngModel)]="emp.employeeEmailId">
+</div>
+<div class="form-control">
+    <label><b>Employee Salary: </b></label>&nbsp;
+    <input type="number" class="form-group" name="salary" [(ngModel)]="emp.employeeSalary">
+
+</div>
+
+
+
+<button type="submit" class="btn btn-primary" [mat-dialog-close]="true">Submit</button> &nbsp;
+<button type="button" class="btn btn-info" (click)="goToEmployeeList()" [mat-dialog-close]="true" >Back</button> &nbsp;
+
+
+</form>
+
+
+
+</div>
